@@ -1,12 +1,14 @@
-import React from 'react'
-import Contact from './Contact'
+import React from "react";
+import Contact from "./Contact";
 
-const Contacts = () => {
-  return (
-    <section className='contacts'>
-        <Contact name="Egor"/>
-    </section>
-)
-}
+const Contacts = (props) => {
+  const { list } = props;
 
-export default Contacts
+  return <section className="contacts">
+    {list.map((contact, index) => {
+       return <Contact key={index} name={contact} />
+    })}
+  </section>;
+};
+
+export default Contacts;

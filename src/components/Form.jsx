@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Form = () => {
+const Form = (props) => {
+    const {sendData} = props;
+
+    const [name, setName] = useState('');
+
+    const changeValue = (e) => {
+        setName(e.target.value ? e.target.value : '');
+    }
+
+    const sendValue = (e) => {
+        e.preventDefault();
+        sendData(name);
+    }
+
   return (
-        <form>
-            <input type="text" placeholder='Introduce el nombre'/>
+        <form onSubmit={sendValue}>
+            <input type="text" placeholder='Introduce el nombre' onKeyUp={changeValue}/>
         </form>
     )
 }
