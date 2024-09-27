@@ -1,0 +1,38 @@
+main{
+  margin: 50px auto;
+  width: 30%;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input{
+  width: 100%;
+  padding: 10px 30px;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  outline: none;
+}
+
+form input[type="submit"]{
+  background-color: #18191A;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contacts .contact{
+  background-color: #18191A;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 30px;
+}
